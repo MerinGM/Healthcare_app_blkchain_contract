@@ -1,0 +1,536 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_DOB",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phoneNo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_specialConditions",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_allergies",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_bloodGroup",
+						"type": "string"
+					}
+				],
+				"name": "addPatient",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_doctorId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					}
+				],
+				"name": "authorizeDoctor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_bloodPressure",
+						"type": "bool"
+					}
+				],
+				"name": "getPatientBloodPressure",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "date",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "SP",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "DP",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "HB",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct MedicalRecords.BloodPressure[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_bloodGroup",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "_allergies",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "_specialConditions",
+						"type": "bool"
+					}
+				],
+				"name": "getPatientInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_sugar",
+						"type": "bool"
+					}
+				],
+				"name": "getPatientSugar",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "date",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "fasting",
+								"type": "bool"
+							},
+							{
+								"internalType": "bool",
+								"name": "afterMeal",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint256",
+								"name": "level",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct MedicalRecords.Sugar[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_vaccine",
+						"type": "bool"
+					}
+				],
+				"name": "getPatientVaccines",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "date",
+								"type": "string"
+							}
+						],
+						"internalType": "struct MedicalRecords.Vaccine[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_date",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_doctor",
+						"type": "string"
+					}
+				],
+				"name": "getPrescriptionIndex",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "prescriptionId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_prescriptions",
+						"type": "bool"
+					}
+				],
+				"name": "getPrescriptions",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "presriptionId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "date",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "doctorName",
+								"type": "string"
+							}
+						],
+						"internalType": "struct MedicalRecords.Prescription[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_doctorId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					}
+				],
+				"name": "revokeDoctor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_date",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_SP",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_DP",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_HB",
+						"type": "uint256"
+					}
+				],
+				"name": "updateBloodPressure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_date",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_doctor",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_morning",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "_afternoon",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "_evening",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					}
+				],
+				"name": "updateMedicine",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_date",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_doctorName",
+						"type": "string"
+					}
+				],
+				"name": "updatePrescription",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_date",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_fasting",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "_afterMeal",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_level",
+						"type": "uint256"
+					}
+				],
+				"name": "updateSugar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_p_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_date",
+						"type": "string"
+					}
+				],
+				"name": "updateVaccine",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/_MedicalRecord .sol": "MedicalRecords"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/_MedicalRecord .sol": {
+			"keccak256": "0x0b977ae0e3343377ddc56ce6d0f895dd447b4b4d6929688a9b785786de212414",
+			"urls": [
+				"bzz-raw://15a72e6ca921782d77b382fa1e31ec6ff2bffe9178c7266e6d3bd9c9179c3861",
+				"dweb:/ipfs/QmZSmyXaShdZEYMkxDGsmFB4Sv7gVqNtgHq6T9kPQjEiGR"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,123 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_doctorId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_hospitalName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_license",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_doctorAddress",
+						"type": "address"
+					}
+				],
+				"name": "addDoctor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_doctorAddress",
+						"type": "address"
+					}
+				],
+				"name": "getDoctorInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/_Doctorstorage.sol": "Doctor"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/_Doctorstorage.sol": {
+			"keccak256": "0x4c2ab0083a891e670d1464ac3c4805e7d462dae3134771e32df1ce316b3b25c3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3b4fd9aedae495d456c5fbe559e600c8c3df8a101207b880f7425ce9526c682e",
+				"dweb:/ipfs/QmZdjcyiPFQL6WveG6izsX8p2WYdFCNi5uQMsiJmVQ9UH7"
+			]
+		}
+	},
+	"version": 1
+}
